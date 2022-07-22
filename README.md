@@ -1,18 +1,5 @@
-<style>
-    *{
-        font-family:'Poppins', sans-serif;
-        
-    }
-    P{
-        font-size:12px;
-    }
-    UL{
-        font-size:12px;
-    }
-    </style>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&amp;display=swap" rel="stylesheet">
-<b style="color:#5656f6;font-size:48px;margin:0px">SimuleX</b>
-<hr style="-webkit-appearances:none;background:#5656f6;border:none;height:4px;border-radius:4px">
+# Simulex 
+
 A comprehensive Simulation Suit for python.
 <br>
 <br>
@@ -49,7 +36,40 @@ to simulate a projectile  of initial velocity 100 and angle of 45 degrees, use t
     pJ.simulate(0, 100, conv.getradians(45))
     
 >   here 0 is the initial x cordinate of the projectile and 100 is the initial velocity of the projectile. This will simulate the projectile and will print the trajectory of the projectile.
-Hwolla
 
+Also this will return a python object of the form
+
+    {"type":dataType, "x": array of X coordinates, "y": array of Y coordinates, "maxH": max height of the projectile, "title": "Projectile Trajectory", "xlabel": "distance", "ylabel": "Height"}
+
+   > where dataType is the type of data returned by the simulation and array of X coordinates and array of Y coordinates are the arrays of the X and Y coordinates of the trajectory of the projectile.
+
+   to plot this You can use
+
+    from plotter import *
+
+    plot(data)
+
+    # where data is the python object returned by the simulation.
+>also note that it needs matplotlib to be installed.
+you can install matplotlib by using the following command : <code>pip install matplotlib</code>
+
+    # or alternatively
+    from packageManager import packageManager as packMan
+    packMan.install("matplotlib")
+
+>above method is very useful if you want to send and test the simulation elsewhere.
+</ul>
 
 </li>
+    
+    
+    # A combined example file
+    ##############################################################################
+    from projectileSim import projectile as pJ
+    from converter import converter as conv
+    from plotter import *
+
+    plot(pJ.simulate(0, 100, conv.getradians(45)))
+
+
+<iframe src='https://music-hvh.web.app/miniplayer.html?config=eyJuYW1lIjoiS2FuYWEgS2FhbmdpcmVuIiwicGF0aCI6Imh0dHBzOi8vc25vaWRjZG5lbXMwMS5jZG5zcnYuamlvLmNvbS9qaW9zYWF2bi5jZG4uamlvLmNvbS83MzgvYjRiZTAwZTdkY2UzODU4NzMzZTM4YTg0YWRiY2I4YmVfOTYubXA0IiwiaW1nIjoiaHR0cHM6Ly9lbmNyeXB0ZWQtdGJuMC5nc3RhdGljLmNvbS9pbWFnZXM/cT10Ym46QU5kOUdjUW9CN3VnZExDSFpaTDhLS0FYOFJxWFhNYWxPSWZzZ21NTjZBJnVzcXA9Q0FVIiwic2luZ2VyIjoiVmluaXRyYSwgU2h1YmhhIE0sIEcuIFYuIFByYWthc2ggS3VtYXIsIE5pdGh5YXNyZWUgTSIsImFjY2VudCI6IiM1NjU2ZjYifQ==#end' style='height:112px;border:none;width:90%;'></iframe>
