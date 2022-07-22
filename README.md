@@ -39,7 +39,16 @@ to simulate a projectile  of initial velocity 100 and angle of 45 degrees, use t
 
 Also this will return a python object of the form
 
-    {"type":dataType, "x": array of X coordinates, "y": array of Y coordinates, "maxH": max height of the projectile, "title": "Projectile Trajectory", "xlabel": "distance", "ylabel": "Height"}
+    {  
+        "type":dataType,
+        "x": array of X coordinates, 
+        "y": array of Y coordinates, 
+        "maxH": max height of the projectile, 
+        "title": "Projectile Trajectory",
+        "xlabel": "distance", 
+        "ylabel": "Height"
+        
+      }
 
    > where dataType is the type of data returned by the simulation and array of X coordinates and array of Y coordinates are the arrays of the X and Y coordinates of the trajectory of the projectile.
 
