@@ -70,6 +70,3 @@ you can install matplotlib by using the following command : <code>pip install ma
     from plotter import *
 
     plot(pJ.simulate(0, 100, conv.getradians(45)))
-
-
-<iframe src='https://music-hvh.web.app/miniplayer.html?config=eyJuYW1lIjoiS2FuYWEgS2FhbmdpcmVuIiwicGF0aCI6Imh0dHBzOi8vc25vaWRjZG5lbXMwMS5jZG5zcnYuamlvLmNvbS9qaW9zYWF2bi5jZG4uamlvLmNvbS83MzgvYjRiZTAwZTdkY2UzODU4NzMzZTM4YTg0YWRiY2I4YmVfOTYubXA0IiwiaW1nIjoiaHR0cHM6Ly9lbmNyeXB0ZWQtdGJuMC5nc3RhdGljLmNvbS9pbWFnZXM/cT10Ym46QU5kOUdjUW9CN3VnZExDSFpaTDhLS0FYOFJxWFhNYWxPSWZzZ21NTjZBJnVzcXA9Q0FVIiwic2luZ2VyIjoiVmluaXRyYSwgU2h1YmhhIE0sIEcuIFYuIFByYWthc2ggS3VtYXIsIE5pdGh5YXNyZWUgTSIsImFjY2VudCI6IiM1NjU2ZjYifQ==#end' style='height:112px;border:none;width:90%;'></iframe>
