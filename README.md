@@ -41,7 +41,7 @@ You can easily simualte a projectile by using the <b>projectile </b> class from 
 to simulate a projectile  of initial velocity 100 and angle of 45 degrees, use the following code:<br>
 
  
-    ```python
+    ```
     
     from projectileSim import projectile as pJ
 
