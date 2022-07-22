@@ -1,4 +1,4 @@
-import time
+
 from projectileSim import projectile as pJ
 from packageManager import packageManager as packMan
 from converter import converter as conv

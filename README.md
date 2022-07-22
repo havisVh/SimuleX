@@ -41,12 +41,15 @@ You can easily simualte a projectile by using the <b>projectile </b> class from 
 to simulate a projectile  of initial velocity 100 and angle of 45 degrees, use the following code:<br>
 
  
-    ```Python
+
     
     from projectileSim import projectile as pJ
+    from converter import converter as conv
 
-    pJ.simulate(0, 1009, conv.getradians(45))
+    pJ.simulate(0, 100, conv.getradians(45))
+    
+>   here 0 is the initial x cordinate of the projectile and 100 is the initial velocity of the projectile. This will simulate the projectile and will print the trajectory of the projectile.
+Hwolla
 
-    ```
 
 </li>
