@@ -21,6 +21,3 @@ class main:
             print("invalid input")
             print("exiting...")
             exit()
-
-
-plot(pJ.simulate(0, 1009, conv.getradians(45)))
