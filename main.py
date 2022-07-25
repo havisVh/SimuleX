@@ -1,8 +1,7 @@
-
-from projectileSim import projectile as pJ
 from packageManager import packageManager as packMan
+from projectileSim import projectile as projSim
+from SimManager import *
 from converter import converter as conv
-from plotter import *
 
 
 class main:
@@ -21,3 +20,6 @@ class main:
             print("invalid input")
             print("exiting...")
             exit()
+
+
+SaveSimulation(projSim.simulate(0, 100, conv.getradians(45)))

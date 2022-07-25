@@ -14,6 +14,7 @@ files included in the repository:
 <li>packageManager.py</li>
 <li>plotter.py</li>
 <li>projectileSim.py</li>
+<li>SimManager.py</li>
 </ul>
 <br>
 <hr>
@@ -86,14 +87,47 @@ you can install matplotlib by using the following command : <code>pip install ma
 
 >above method is very useful if you want to send and test the simulation elsewhere.
 </ul>
+<ul>
+<hr>
+<li><h3>How to save a finished simulation</h3>
+You can save a finished simulation to render it later, by calling <code>SaveSimulation(data,env)</code> from <b>SimManager.py</b>
 
-</li>
+    # EXAMPLE
+    #import all dependencies
+
     
+    from projectileSim import projectile as pJ
+    from converter import converter as conv
+    from SimManager import *
+
+>Call the below function to save a python3 file which will can used to render the simulation to a png file later. **Remember it needs the dependency plotter.py to be installed.**
     
+    SaveSimulation(pj.simulate(0, 100, conv.getradians(45)),'int')
+>*Alternatievely*
+If you want to render the sim somewhere else, where SimuleX is Absent, you can use the following code:
+*it will install all the dependencies (mainly matplotlib) and then save the simulation to a png file Automatically.*
+
+    SaveSimulation(pj.simulate(0, 100, conv.getradians(45)),'ext')
+    
+ >now to save as a csv file, you can use the following code:
+
+    SaveSimulation(pj.simulate(0, 100, conv.getradians(45)),'csv')
+>to save as a JSON file, you can use the following code:
+
+    SaveSimulation(pj.simulate(0, 100, conv.getradians(45)),'json')
+</ul>
+
     # A combined example file
 
     from projectileSim import projectile as pJ
     from converter import converter as conv
     from plotter import *
+    from SimManager import *
 
-    plot(pJ.simulate(0, 100, conv.getradians(45)))
+    data = pJ.simulate(0, 100, conv.getradians(45))
+    plot(data)
+    SaveSimulation(data,'int') #please not that 'int' keyword is not necessary to save the simulation , as it is the default.
+
+    SaveSimulation(data,'ext')
+    SaveSimulation(data,'csv')
+    SaveSimulation(data,'json')

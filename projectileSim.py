@@ -3,6 +3,8 @@ import time
 
 
 class projectile:
+    def __init__(self):
+        print("ProjectileSimulator")
 
     def simulate(intiCord, initVelocity, angle):
         tr = 0
