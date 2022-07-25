@@ -39,22 +39,36 @@ to simulate a projectile  of initial velocity 100 and angle of 45 degrees, use t
 
 Also this will return a python object of the form
 
-    {  
-        "type":dataType,
-        "x": array of X coordinates, 
-        "y": array of Y coordinates, 
-        "maxH": max height of the projectile, 
-        "title": "Projectile Trajectory",
-        "xlabel": "distance", 
-        "ylabel": "Height"
-        
-      }
+    dataObject = {
+        "type": "datatype",
+                "data": data => *dictionary,
+                "maxH": max Height => *float,
+                "title": "Projectile Trajectory",
+                "xlabel": "distance",
+                "ylabel": "Height",
+                "time": t => *float,
+                "increment": increment => *float,
+                }
 
-   > where dataType is the type of data returned by the simulation and array of X coordinates and array of Y coordinates are the arrays of the X and Y coordinates of the trajectory of the projectile.
+   >   here datatype is the type of data that is being plotted. In this case it is the path of the projectile. the data itself is of type as given below
 
-so to get the final position  of the projectile, use the following code:
+    [{0:{
+        'x': "X cordinate at Time 0",
+        'y': "Y cordinate at Time 0",
+    }},...
+    ....
+    ....
+    t{
+        'x': "X cordinate at Time t",
+        'y': "Y cordinate at Time t",
+    }]
+    ]
+to loop through the data use 
     
-    data["x"][-1]
+    for i in range(int(round(dataObject["t"]/dat["increment"],2))):
+        print(dataObject["data"][i][t]["x"])
+        print(dataObject["data"][i][t]["y"])
+
     
    to plot this You can use
 
@@ -63,7 +77,7 @@ so to get the final position  of the projectile, use the following code:
     plot(data)
 
     # where data is the python object returned by the simulation.
->also note that it needs matplotlib to be installed.
+>**<u>also note that it needs matplotlib to be installed.</u>**
 you can install matplotlib by using the following command : <code>pip install matplotlib</code>
 
     # or alternatively
@@ -77,7 +91,7 @@ you can install matplotlib by using the following command : <code>pip install ma
     
     
     # A combined example file
-    ##############################################################################
+
     from projectileSim import projectile as pJ
     from converter import converter as conv
     from plotter import *

@@ -21,3 +21,10 @@ class main:
             print("invalid input")
             print("exiting...")
             exit()
+
+
+dataObject = pJ.simulate(0, 10, conv.getradians(45))
+# print(dataObject)
+
+Y = (dataObject["data"][index]["y"])
+print("x = " + str(X) + ", y = " + str(Y))

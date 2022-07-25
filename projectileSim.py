@@ -1,4 +1,3 @@
-from distutils.log import warn
 import math
 import time
 
@@ -16,8 +15,8 @@ class projectile:
         v = initVelocity
         theta = angle
         t = 0
-        dashX = []
-        dashY = []
+        dash = []
+        increment = 0.1
         maxH = 0
         # Calculate trajectory
         while y >= 0:
@@ -28,10 +27,21 @@ class projectile:
             if y > 100000:
                 print("The projectile will not reach the ground.")
                 break
-            dashX.append(x)
-            dashY.append(y)
+            t = round(t, 2)
+            dash.append({t: {
+                "x": x,
+                "y": y
+            }})
             print("x = " + str(x) + ", y = " + str(y))
-            t += 0.1
+            t += increment
+
         tr = (time.time() - tr)*1000
         print("simulation Completed in " + str(tr) + " milliseconds")
-        return {"type": "numarray", "x": dashX, "y": dashY, "maxH": maxH, "title": "Projectile Trajectory", "xlabel": "distance", "ylabel": "Height"}
+        return {"type": "numarray_increment_t",
+                "data": dash,
+                "maxH": maxH,
+                "title": "Projectile Trajectory",
+                "xlabel": "distance",
+                "ylabel": "Height",
+                "time": t,
+                "increment": increment}
