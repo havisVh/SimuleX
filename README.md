@@ -52,6 +52,10 @@ Also this will return a python object of the form
 
    > where dataType is the type of data returned by the simulation and array of X coordinates and array of Y coordinates are the arrays of the X and Y coordinates of the trajectory of the projectile.
 
+so to get the final position  of the projectile, use the following code:
+    
+    data["x"][-1]
+    
    to plot this You can use
 
     from plotter import *
