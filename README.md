@@ -24,7 +24,7 @@ files included in the repository:
 You can easily simualte a projectile by using the <b>projectile </b> class from <b>projectileSim.py</b>
 <br>
 <br>
-<h3>for example:<h3>
+<h3>for example:</h3>
 <br>
 to simulate a projectile  of initial velocity 100 and angle of 45 degrees, use the following code:<br>
 
