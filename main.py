@@ -20,6 +20,3 @@ class main:
             print("invalid input")
             print("exiting...")
             exit()
-
-
-SaveSimulation(projSim.simulate(0, 100, conv.getradians(45)))

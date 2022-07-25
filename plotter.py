@@ -48,6 +48,3 @@ def SaveImage(obj):
             plt.ylabel(obj["ylabel"])
             plt.plot(arrayX, arrayY)
             plt.savefig(obj["title"] + ".png")
-
-
-print("☺️")
