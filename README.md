@@ -1,4 +1,4 @@
-# Simulex 
+# SimuleX
 
 A comprehensive Simulation Suit for python.
 <br>
@@ -64,11 +64,7 @@ Also this will return a python object of the form
         'y': "Y cordinate at Time t",
     }]
     ]
-to loop through the data use 
-    
-    for i in range(int(round(dataObject["t"]/dat["increment"],2))):
-        print(dataObject["data"][i][t]["x"])
-        print(dataObject["data"][i][t]["y"])
+
 
     
    to plot this You can use
@@ -90,7 +86,9 @@ you can install matplotlib by using the following command : <code>pip install ma
 <ul>
 <hr>
 <li><h3>How to save a finished simulation</h3>
-You can save a finished simulation to render it later, by calling <code>SaveSimulation(data,env)</code> from <b>SimManager.py</b>
+You can save a finished simulation to render it later, by calling <code>SaveSimulation(data,env_You_Run_This_In,path_to_Save_to)</code> from <b>SimManager.py</b>
+
+><i><b>path_to_Save_to is "/" by default</b></i>
 
     # EXAMPLE
     #import all dependencies

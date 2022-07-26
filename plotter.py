@@ -7,9 +7,9 @@ except ImportError:
     import matplotlib.pyplot as plt
 
 
-def plot(obj, ask):
+def plot(obj, ask='else', path='/'):
     if ask == "Save":
-        SaveImage(obj)
+        SaveImage(obj, path)
     else:
         arrayX = []
         arrayY = []
@@ -30,7 +30,7 @@ def plot(obj, ask):
                 plt.show()
 
 
-def SaveImage(obj):
+def SaveImage(obj, path='/'):
     arrayX = []
     arrayY = []
     t = 0
@@ -47,4 +47,4 @@ def SaveImage(obj):
             plt.xlabel(obj["xlabel"])
             plt.ylabel(obj["ylabel"])
             plt.plot(arrayX, arrayY)
-            plt.savefig(obj["title"] + ".png")
+            plt.savefig(path+obj["title"] + ".png")
